@@ -89,6 +89,8 @@ pub const FileExtensions = enum {
     yml,
     @"7z",
     otf,
+    xlsx,
+    xls,
     zig,
     zip,
 };

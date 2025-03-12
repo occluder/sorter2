@@ -48,6 +48,7 @@ const FolderWhitelist = [_][]const u8{
     "Other",
     "Save_webP",
 };
+
 fn arrangeFiles(allocator: mem.Allocator, list: *std.ArrayList(FileInfo)) void {
     var dir = fs.openDirAbsolute("D:\\HDD Downloads", .{ .iterate = true }) catch |err| {
         log.err("Could not open downloads folder!! ({})", .{err});
@@ -70,7 +71,7 @@ fn arrangeFiles(allocator: mem.Allocator, list: *std.ArrayList(FileInfo)) void {
             switch (file.getExt()) {
                 .zip, .@"7z", .rar => dest = "Archives",
                 .mp3, .wav, .ogg => dest = "Audio",
-                .pdf, .doc, .docx, .ppt, .pptx => dest = "Documents",
+                .pdf, .doc, .docx, .ppt, .pptx, .xlsx, .xls => dest = "Documents",
                 .exe, .msi, .jar, .bat => dest = "Executables",
                 .xcf => dest = "GimpProjects",
                 .jpg, .jpeg, .png, .gif, .webp, .avif, .svg => dest = "Images",

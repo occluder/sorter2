@@ -1,10 +1,9 @@
 .{
-    .name = "sorter2",
-
+    .name = .sorter2,
     .version = "0.0.0",
-
+    .minimum_zig_version = "0.14.0",
+    .fingerprint = 0x45c36f1cd2b75964,
     .dependencies = .{},
-
     .paths = .{
         "build.zig",
         "build.zig.zon",

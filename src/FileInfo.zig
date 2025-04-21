@@ -66,6 +66,7 @@ pub const FileExtensions = enum {
     jpeg,
     json,
     jar,
+    md,
     mkv,
     mov,
     mp3,

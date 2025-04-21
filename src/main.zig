@@ -75,7 +75,7 @@ fn arrangeFiles(allocator: mem.Allocator, list: *std.ArrayList(FileInfo)) void {
                 .exe, .msi, .jar, .bat => dest = "Executables",
                 .xcf => dest = "GimpProjects",
                 .jpg, .jpeg, .png, .gif, .webp, .avif, .svg => dest = "Images",
-                .txt, .yml, .json, .csv, .xml => dest = "Raw",
+                .txt, .yml, .json, .csv, .xml, .md => dest = "Raw",
                 .cs, .zig => dest = "Code",
                 .html, .css => dest = "Sites",
                 .mp4, .mkv, .mov, .webm => dest = "Videos",
